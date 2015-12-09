@@ -2002,7 +2002,10 @@ public final class Async {
      *         subscribes
      * @see #start(rx.functions.Func0) 
      * @see <a href="https://github.com/ReactiveX/RxJava/wiki/Async-Operators#wiki-fromcallable">RxJava Wiki: fromCallable()</a>
+     *
+     * @deprecated use {@link Observable#fromCallable(Callable)}
      */
+    @Deprecated
     public static <R> Observable<R> fromCallable(Callable<? extends R> callable) {
         return fromCallable(callable, Schedulers.computation());
     }
